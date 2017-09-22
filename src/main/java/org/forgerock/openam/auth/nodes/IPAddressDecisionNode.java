@@ -38,10 +38,9 @@ public class IPAddressDecisionNode implements Node {
         Map<String, String> ipList();
 
         @Attribute(order=200)
-        default boolean blacklist(){
+        default boolean blacklist() {
             return false;
         }
-
     }
 
     private final Config config;
@@ -53,8 +52,7 @@ public class IPAddressDecisionNode implements Node {
      */
     @Inject
     public IPAddressDecisionNode(@Assisted Config config) throws NodeProcessException {
-        this.config = config;
-  
+        this.config = config; 
     }
 
     @Override
@@ -90,11 +88,24 @@ public class IPAddressDecisionNode implements Node {
 
                 debug.message("[" + DEBUG_FILE + "]: " + " running in " + mode + " mode");  
 
-                //If match found and whitelist or not found and running as a blacklist return True
-                if((matchFound && !config.blacklist()) || (!matchFound && config.blacklist())){
+                //If acting as whitelist
+                if(config.blacklist()==false){
 
-                    return goTo("true").build();
+                    if(matchFound){
+
+                        return goTo("true").build();
+                    }
+
+                //If acting as a blacklist
+                } else {
+
+                    if(matchFound){
+
+                        return goTo("false").build();
+                    }
                 }
+
+
             }
         }
 
