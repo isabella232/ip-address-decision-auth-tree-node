@@ -1,0 +1,4 @@
+org/forgerock/openam/auth/nodes/IPAddressDecisionNode.class
+org/forgerock/openam/auth/nodes/IPAddressDecisionNode$OutcomeProvider.class
+org/forgerock/openam/auth/nodes/IPAddressDecisionNodePlugin.class
+org/forgerock/openam/auth/nodes/IPAddressDecisionNode$Config.class
