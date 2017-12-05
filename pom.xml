@@ -22,7 +22,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ip-address-decision-node</artifactId>
+    <artifactId>ip-address-decision-auth-tree-node</artifactId>
     <groupId>org.forgerock.am</groupId>
     <version>5.5.0</version>    
     <name>IP Address Decision Authentication Node</name>
