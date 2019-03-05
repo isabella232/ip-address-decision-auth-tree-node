@@ -24,14 +24,13 @@ package org.forgerock.openam.auth.nodes;
 import java.util.List;
 import java.util.ResourceBundle;
 import javax.inject.Inject;
-import org.forgerock.guava.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableList;
 import org.forgerock.json.JsonValue;
 import org.forgerock.openam.annotations.sm.Attribute;
 import org.forgerock.openam.auth.node.api.*;
 import org.forgerock.util.i18n.PreferredLocales;
 import com.google.inject.assistedinject.Assisted;
 import com.sun.identity.shared.debug.Debug;
-import javax.inject.Inject;
 import java.util.*;
 import org.forgerock.openam.utils.IPRange;
 
